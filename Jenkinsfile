@@ -4,7 +4,8 @@ pipeline {
             stage('Init') {
                   steps {
                         echo 'Hi, this is Anshul from LevelUp360'
-                        echo 'We are Starting the Testing'
+                       
+                       git branch: 'main', url: 'https://github.com/saisudhavana/AzureAppService.git'
                   }
             }
             stage('Build') {
