@@ -1,0 +1,20 @@
+node {
+    def environments = ['development', 'staging', 'production']
+
+    stage('Loop through Environments') {
+        for (env in environments) {
+            echo "Deploying to ${env} environment..."
+            
+            // Add your deployment steps here
+            // For example:
+            // sh "deploy_to_${env}.sh"
+        }
+    }
+}
+post
+{
+    success
+    {
+        mail to: 'saisudhavana@gmail.com'
+    }
+}
